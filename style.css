@@ -56,10 +56,3 @@ footer {
 #blog-posts ul li a:hover {
     text-decoration: underline;
 }
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    header, main, footer {
-        text-align: center;
-    }
-}
