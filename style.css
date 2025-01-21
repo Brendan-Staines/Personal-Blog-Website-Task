@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,14 +13,26 @@ body {
 header {
     background-color: #4C8CAF;
     color: #FFFFFF;
-    padding: 1rem;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid #CCCCCC;
     text-align: center;
+}
+
+header h1 {
     text-decoration: underline;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px;
 }
 
 header nav a {
     color: #FFFFFF;
-    margin: 0 10px;
+    padding: 10px 15px;
     text-decoration: none;
 }
 
@@ -29,7 +45,9 @@ main {
 }
 
 div {
-    margin-bottom: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
 }
 
 footer {
@@ -44,8 +62,17 @@ footer {
 }
 
 #blog-posts ul {
-    list-style-type: circle;
+    list-style-type: none;
     padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+#blog-posts ul li {
+    flex: 1 1 calc(30% - 20px); 
+    border: 1px solid #ccc;
+    padding: 15px;
 }
 
 #blog-posts ul li a {
@@ -55,4 +82,19 @@ footer {
 
 #blog-posts ul li a:hover {
     text-decoration: underline;
+}
+
+#contact a {
+    color: #4C8CAF;
+}
+
+#photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+}
+
+#photo-gallery img {
+    width: 100%;
+    border-radius: 8px;
 }
